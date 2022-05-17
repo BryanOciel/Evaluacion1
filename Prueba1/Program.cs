@@ -13,13 +13,13 @@ namespace Prueba1
             Buque a = new Buque("35899", 551465,2,20,"Titanic","Uruguay");
             Buque b = new Buque("35877", 565456, 5, 20, "Esmeralda", "Chile");
             Container pri = new Container("15423", a, 45100);
-            Container seg = new Container("25681", a, 51500);
-            Container ter = new Container("36898", b, 72800);
+            Container seg = new Container("25681", b, 51500);
+            Container ter = new Container("36898", a, 72800);
             Container cua = new Container("49862", b, 200000, 200000);
-             a.SubirContainer(pri);
-             a.SubirContainer(seg);
-             b.SubirContainer(ter);
-             b.SubirContainer(cua);
+             a.sContainer(pri);
+             a.sContainer(seg);
+             b.sContainer(ter);
+             b.sContainer(cua);
             Console.WriteLine("Containers Buque 35899");
             Console.WriteLine("+++++++++++++++++++++++++++++++++++++");
             foreach (Container f in a.ListaContainers)

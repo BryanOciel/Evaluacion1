@@ -47,7 +47,7 @@ namespace Prueba1
             this.pais = pais;
         }
 
-        public bool SubirContainer(Container container)
+        public bool sContainer(Container container)
         {
             if (container.Tamaño == 40)
             {

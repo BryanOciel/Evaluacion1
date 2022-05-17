@@ -45,10 +45,7 @@ namespace Prueba1
             pActual -= peso;
             if (pActual < 0) pActual = 0;
         }
-        public int ValorInspeccion()
-        {
-            return (pActual * 5);
-        }
+        
         public int CalcularEnvio()
         {
             int gEnvio = buque.gEnvio / buque.CantidadContainers;
@@ -58,6 +55,10 @@ namespace Prueba1
             }
             else gEnvio += 5000;
             return gEnvio;
+        }
+        public int ValorInspeccion()
+        {
+            return (pActual * 5);
         }
         public bool PuedeSubir(int peso)
         {
