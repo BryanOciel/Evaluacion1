@@ -36,7 +36,7 @@ namespace Prueba1
             this.buque = buque;
             this.capacidadMaxima = capacidadMaxima;
             this.pesoActual = pesoActual;
-            // Si la condición no se cumple, el container será creado con el valor 20 por defecto
+            // Si la condición no se cumple, el container será creado con el valor 20.
             if (tamaño >= 30) tamaño = 40;
             this.marca = marca;
             this.esRefrigerado = esRefrigerado;
@@ -48,13 +48,13 @@ namespace Prueba1
             if (pesoActual < 0) pesoActual = 0;
         }
         /// Calcula el valor que se pagara por una inspeccion.
-        /// <returns>Valor de la inspección.
+        /// Valor de la inspección.
         public int ValorPagoInspeccion()
         {
             return (pesoActual * 5);
         }
         /// Calcula el gasto del envio.
-        /// <returns>Valor del gasto.
+        /// Valor del gasto.
         public int CalcularGastosEnvio()
         {
             int gastoEnvio = buque.GastoEnvio / buque.CantidadContainers;
@@ -67,7 +67,7 @@ namespace Prueba1
         }
         /// Determina si el container se puede cargar sin exceder el limite establecido.
         /// <param name="peso"></param>
-        /// <returns>True si puede cargarse, y false si se excede el peso maximo extablesido.
+        /// True si puede cargarse, y false si se excede el peso maximo extablesido.
         public bool PuedeSubir(int peso)
         {
             if ((peso + pesoActual) > capacidadMaxima) return false;

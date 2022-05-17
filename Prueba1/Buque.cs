@@ -49,7 +49,7 @@ namespace Prueba1
         }
         /// Sube container que se haya asociado a un buque.
         /// <param name="container">
-        /// <returns>True si puede ser cargado, false si no.
+        /// True si puede ser cargado, false si no.
         public bool SubirContainer(Container container)
         {
             if (container.Tamaño == 40)
