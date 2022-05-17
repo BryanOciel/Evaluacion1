@@ -4,12 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Prueba1
-{
-    internal class Program
-    {
-        static void Main(string[] args)
-        {
+namespace Prueba1{
+    internal class Program{
+        static void Main(string[] args) {
             Buque a = new Buque("35899", 551465,2,20,"Titanic","Uruguay");
             Buque b = new Buque("35877", 565456, 5, 20, "Esmeralda", "Chile");
             Container c = new Container("15423", a, 45100);
@@ -22,8 +19,7 @@ namespace Prueba1
              b.sContainer(p);
             Console.WriteLine("Containers Buque 35899");
             Console.WriteLine("+++++++++++++++++++++++++++++++++++++");
-            foreach (Container f in a.ListaContainers)
-            {
+            foreach (Container f in a.ListaContainers){
                 Console.WriteLine("Codigo Container: " + f.Codigo);
                 Console.WriteLine("Marca: " + f.Marca);
                 Console.WriteLine("Pais: " + f.buque.Pais);
@@ -38,8 +34,7 @@ namespace Prueba1
             Console.WriteLine();
             Console.WriteLine("Containers Buque 35877");
             Console.WriteLine("+++++++++++++++++++++++++++++++++++++");
-            foreach (Container f in b.ListaContainers)
-            {
+            foreach (Container f in b.ListaContainers){
                 Console.WriteLine("Codigo Container: " + f.Codigo);
                 Console.WriteLine("Marca: " + f.Marca);
                 Console.WriteLine("Pais: " + f.buque.Pais);
