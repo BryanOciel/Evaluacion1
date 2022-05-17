@@ -36,9 +36,9 @@ namespace Prueba1
             this.buque = buque;
             this.caMaxima = CaMaxima;
             this.pActual = pActual;
-            if (tamaño >= 30) tamaño = 40;
             this.marca = marca;
             this.esRefrigerado = esRefrigerado;
+            if (tamaño >= 30) tamaño = 40;
         }
         public void SacarPeso(int peso)
         {
