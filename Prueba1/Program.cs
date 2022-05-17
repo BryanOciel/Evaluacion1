@@ -19,7 +19,19 @@ namespace Prueba1{
              b.sContainer(p);
             Console.WriteLine("Containers Buque 35899");
             Console.WriteLine("+++++++++++++++++++++++++++++++++++++");
-            foreach (Container f in a.ListaContainers){
+            Container f = new Container(null);
+            int aux=0;
+            for (int i = 0; i < 4; i++)
+            {
+                if (i < 2) { f = a.ListaContainers[i]; }
+                else
+                {
+                    f = b.ListaContainers[aux];
+                    aux = aux + 1;
+                    Console.WriteLine();
+                    Console.WriteLine("Containers Buque 35877");
+                    Console.WriteLine("+++++++++++++++++++++++++++");
+                }
                 Console.WriteLine("Codigo Container: " + f.Codigo);
                 Console.WriteLine("Marca: " + f.Marca);
                 Console.WriteLine("Pais: " + f.buque.Pais);
@@ -30,21 +42,6 @@ namespace Prueba1{
                 else Console.WriteLine("No|");
                 Console.WriteLine("Peso Actual Del Container: " + f.PActual + "kg|");
                 Console.WriteLine("+++++++++++++++++++++++++++++++++++++++++++++++");
-            }
-            Console.WriteLine();
-            Console.WriteLine("Containers Buque 35877");
-            Console.WriteLine("+++++++++++++++++++++++++++++++++++++");
-            foreach (Container f in b.ListaContainers){
-                Console.WriteLine("Codigo Container: " + f.Codigo);
-                Console.WriteLine("Marca: " + f.Marca);
-                Console.WriteLine("Pais: " + f.buque.Pais);
-                Console.WriteLine("Capacidad maxima: " + f.caMaxima + "kg|");
-                Console.WriteLine("Tamaño: " + f.Tamaño + " pies de altura|");
-                Console.Write("Es Un Container Refrigerado: ");
-                if (f.EsRefrigerado) Console.WriteLine("Si|");
-                else Console.WriteLine("No|");
-                Console.WriteLine("Peso Actual Del Container: " + f.PActual + "kg|");
-                Console.WriteLine("+++++++++++++++++++++++++++++++++++++");
             }
             Console.WriteLine();
             Console.WriteLine("Valor Por El Envio De cada Container y su codigo es:");
