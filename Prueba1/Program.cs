@@ -21,11 +21,11 @@ namespace Prueba1
              a.SubirContainer(seg);
              b.SubirContainer(ter);
              b.SubirContainer(cua);
-            Console.WriteLine("Contenedores Buque 35899");
+            Console.WriteLine("Containers Buque 35899");
             Console.WriteLine(".......................................");
             foreach (Container f in a.ListaContainers)
             {
-                Console.WriteLine("Codigo: " + f.Codigo);
+                Console.WriteLine("Codigo Container: " + f.Codigo);
                 Console.WriteLine("Marca: " + f.Marca);
                 Console.WriteLine("Pais: " + f.buque.Pais);
                 Console.WriteLine("Capacidad maxima: " + f.caMaxima + " kg");
@@ -39,11 +39,11 @@ namespace Prueba1
                 Console.WriteLine(".......................................");
             }
             Console.WriteLine();
-            Console.WriteLine("Contenedores Buque 35877");
+            Console.WriteLine("Containers Buque 35877");
             Console.WriteLine(".......................................");
             foreach (Container f in b.ListaContainers)
             {
-                Console.WriteLine("Codigo: " + f.Codigo);
+                Console.WriteLine("Codigo Container: " + f.Codigo);
                 Console.WriteLine("Marca: " + f.Marca);
                 Console.WriteLine("Pais: " + f.buque.Pais);
                 Console.WriteLine("Capacidad maxima: " + f.caMaxima + " kg");
