@@ -12,14 +12,14 @@ namespace Prueba1
         {
             Buque a = new Buque("35899", 551465,2,20,"Titanic","Uruguay");
             Buque b = new Buque("35877", 565456, 5, 20, "Esmeralda", "Chile");
-            Container pri = new Container("15423", a, 45100);
-            Container seg = new Container("25681", b, 51500);
-            Container ter = new Container("36898", a, 72800);
-            Container cua = new Container("49862", b, 200000, 200000);
-             a.sContainer(pri);
-             a.sContainer(seg);
-             b.sContainer(ter);
-             b.sContainer(cua);
+            Container c = new Container("15423", a, 45100);
+            Container d = new Container("25681", b, 51500);
+            Container j = new Container("36898", a, 72800);
+            Container p = new Container("49862", b, 200000, 200000);
+             a.sContainer(c);
+             a.sContainer(d);
+             b.sContainer(j);
+             b.sContainer(p);
             Console.WriteLine("Containers Buque 35899");
             Console.WriteLine("+++++++++++++++++++++++++++++++++++++");
             foreach (Container f in a.ListaContainers)
@@ -54,19 +54,19 @@ namespace Prueba1
             Console.WriteLine();
             Console.WriteLine("Valor Por El Envio De cada Container y su codigo es:");
             Console.WriteLine("+++++++++++++++++++++++++++++++++++++");
-            Console.WriteLine("Buque 35899| numero container " + pri.Codigo + " el precio del envio es: $" + pri.CalcularEnvio() + "|");
-            Console.WriteLine("Buque 35899| numero container " + seg.Codigo + " el precio del envio es: $" + seg.CalcularEnvio() + "|");
-            Console.WriteLine("Buque 35877| numero container " + ter.Codigo + " el precio del envio es: $" + ter.CalcularEnvio() + "|");
-            Console.WriteLine("Buque 35877| numero container " + cua.Codigo + " el precio del envio es: $" + cua.CalcularEnvio() + "|");
+            Console.WriteLine("Buque 35899| numero container " + c.Codigo + " el precio del envio es: $" + c.CalcularEnvio() + "|");
+            Console.WriteLine("Buque 35899| numero container " + d.Codigo + " el precio del envio es: $" + d.CalcularEnvio() + "|");
+            Console.WriteLine("Buque 35877| numero container " + j.Codigo + " el precio del envio es: $" + j.CalcularEnvio() + "|");
+            Console.WriteLine("Buque 35877| numero container " + p.Codigo + " el precio del envio es: $" + p.CalcularEnvio() + "|");
             Console.WriteLine("+++++++++++++++++++++++++++++++++++++");
             Console.WriteLine();
-            Console.WriteLine("Valor a Pagar Por Inspeccion Container "+ ter.Codigo+": $" + ter.ValorInspeccion() + "|");
+            Console.WriteLine("Valor a Pagar Por Inspeccion Container "+ c.Codigo+": $" + j.ValorInspeccion() + "|");
             Console.WriteLine();
-                 if (cua.PuedeSubir(2000)) Console.WriteLine("Subir Caja de 2000 kilos al container "+ cua.Codigo+"|");
-                 else Console.WriteLine("No subir caja de 2000 kilos al container "+ cua.Codigo+"|");
+                 if (p.PuedeSubir(2000)) Console.WriteLine("Subir Caja de 2000 kilos al container "+ p.Codigo+"|");
+                 else Console.WriteLine("No subir caja de 2000 kilos al container "+ p.Codigo+" por que excede el maximo permitido|");
             Console.WriteLine();
-                 pri.SacarPeso(200);
-            Console.WriteLine("Peso del primer container restando los 200kg: " + pri.PActual + "kg|");
+                 c.SacarPeso(200);
+            Console.WriteLine("Peso del primer container restando los 200kg: " + c.PActual + "kg|");
             Console.ReadKey();
         }
     }
