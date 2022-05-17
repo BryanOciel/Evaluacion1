@@ -15,10 +15,10 @@ namespace Prueba1
         private int cantidadContainersCargados;
         private int gTransporte;
         private List<Container> listaContainers = new List<Container>();
-        public string Codigo { get => codigo; }
-        public string Nombre { get => nombre; set => nombre = value; }
-        public string Pais { get => pais; set => pais = value; }
-        public int CantidadContainers { get => cantidadContainers; set => cantidadContainers = value; }
+        public string Codigo {get => codigo;}
+        public string Nombre {get => nombre; set => nombre = value;}
+        public string Pais {get => pais; set => pais = value;}
+        public int CantidadContainers {get => cantidadContainers; set => cantidadContainers = value;}
         public int CantidadContainersCargados
         {
             get => cantidadContainersCargados;
@@ -28,8 +28,8 @@ namespace Prueba1
                 else cantidadContainersCargados = value;
             }
         }
-        public int gEnvio { get => gTransporte; set => gTransporte = value; }
-        public List<Container> ListaContainers { get => listaContainers; }
+        public int gEnvio {get => gTransporte; set => gTransporte = value;}
+        public List<Container> ListaContainers {get => listaContainers;}
         public Buque(string codigo, int gTransporte = 0, int cantidadContainers = 20, int cantidadContainersCargados = 0, string nombre = "Sin especificar", string pais = "Sin especificar")
         {
             if (codigo.Length < 5)

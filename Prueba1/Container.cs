@@ -45,11 +45,11 @@ namespace Prueba1
             pActual -= peso;
             if (pActual < 0) pActual = 0;
         }
-        public int ValorPagoInspeccion()
+        public int ValorInspeccion()
         {
             return (pActual * 5);
         }
-        public int CalcularGastosEnvio()
+        public int CalcularEnvio()
         {
             int gEnvio = buque.gEnvio / buque.CantidadContainers;
             if (tamaño == 40)
