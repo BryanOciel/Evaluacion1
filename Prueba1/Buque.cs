@@ -36,7 +36,6 @@ namespace Prueba1
             {
                 for (int i = 0; i < (5 - codigo.Length); i++)
                 {
-                    // Se concatena el codigo hasta que contenga 5 carácteres
                     codigo = string.Concat("0", codigo);
                 }
             }
