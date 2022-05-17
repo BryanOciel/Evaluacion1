@@ -63,9 +63,7 @@ namespace Prueba1
             else gEnvio += 5000;
             return gEnvio;
         }
-        /// Determina si el container se puede cargar sin exceder el limite establecido.
-        /// <param name="peso"></param>
-        /// True si puede cargarse, y false si se excede el peso maximo extablesido.
+    
         public bool PuedeSubir(int peso)
         {
             if ((peso + pesoActual) > CaMaxima) return false;

@@ -65,7 +65,7 @@ namespace Prueba1
             Console.WriteLine("Valor inspección del tercer container: " + ter.ValorPagoInspeccion() + " CLP");
             Console.WriteLine();
             /* Mostrar el valor que debe pagar cada uno de los containers creados por conceptos de gastos de envío. */
-            Console.WriteLine("Valor Por El Envio De cada Container");
+            Console.WriteLine("Valor Por El Envio De cada Container y su codigo es:");
             Console.WriteLine(".......................................");
             Console.WriteLine("Buque 35899 numero container " + pri.Codigo + " el precio del envio es: " + pri.CalcularGastosEnvio() + " CLP");
             Console.WriteLine("Buque 35899 numero container " + seg.Codigo + " el precio del envio es: " + seg.CalcularGastosEnvio() + " CLP");

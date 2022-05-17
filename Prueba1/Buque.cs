@@ -47,9 +47,7 @@ namespace Prueba1
             this.nombre = nombre;
             this.pais = pais;
         }
-        /// Sube container que se haya asociado a un buque.
-        /// <param name="container">
-        /// True si puede ser cargado, false si no.
+
         public bool SubirContainer(Container container)
         {
             if (container.Tamaño == 40)
