@@ -15,10 +15,10 @@ namespace Prueba1
             Buque dos = new Buque("35877", 565456, 5, 20, "Esmeralda", "Chile");
             /* Crear 4 containers y asociarlos a un buque. El cuarto container que cree, lo debe ser creado con el peso máximo
             que se puede cargar. */
-            Container pri = new Container("00001", uno, 45100);
-            Container seg = new Container("00002", uno, 51500);
-            Container ter = new Container("00003", dos, 72800);
-            Container cua = new Container("00004", dos, 200000, 200000);
+            Container pri = new Container("15423", uno, 45100);
+            Container seg = new Container("25681", uno, 51500);
+            Container ter = new Container("36898", dos, 72800);
+            Container cua = new Container("49862", dos, 200000, 200000);
             uno.SubirContainer(pri);
             uno.SubirContainer(seg);
             dos.SubirContainer(ter);
@@ -32,7 +32,7 @@ namespace Prueba1
                 Console.WriteLine("Codigo: " + c.Codigo);
                 Console.WriteLine("Marca: " + c.Marca);
                 Console.WriteLine("Pais: " + c.buque.Pais);
-                Console.WriteLine("Capacidad maxima: " + c.CapacidadMaxima + " kg");
+                Console.WriteLine("Capacidad maxima: " + c.caMaxima + " kg");
                 Console.WriteLine("Tamaño: " + c.Tamaño + " pies de altura");
                 Console.Write("Refrigerado: ");
 
@@ -50,7 +50,7 @@ namespace Prueba1
                 Console.WriteLine("Codigo: " + c.Codigo);
                 Console.WriteLine("Marca: " + c.Marca);
                 Console.WriteLine("Pais: " + c.buque.Pais);
-                Console.WriteLine("Capacidad maxima: " + c.CapacidadMaxima + " kg");
+                Console.WriteLine("Capacidad maxima: " + c.caMaxima + " kg");
                 Console.WriteLine("Tamaño: " + c.Tamaño + " pies de altura");
                 Console.Write("Refrigerado: ");
 

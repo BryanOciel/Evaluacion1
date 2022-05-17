@@ -13,7 +13,7 @@ namespace Prueba1
         private string pais;
         private int cantidadContainers;
         private int cantidadContainersCargados;
-        private int gastoTransporte;
+        private int gTransporte;
         private List<Container> listaContainers = new List<Container>();
         public string Codigo { get => codigo; }
         public string Nombre { get => nombre; set => nombre = value; }
@@ -28,9 +28,9 @@ namespace Prueba1
                 else cantidadContainersCargados = value;
             }
         }
-        public int GastoEnvio { get => gastoTransporte; set => gastoTransporte = value; }
+        public int gEnvio { get => gTransporte; set => gTransporte = value; }
         public List<Container> ListaContainers { get => listaContainers; }
-        public Buque(string codigo, int gastoTransporte = 0, int cantidadContainers = 20, int cantidadContainersCargados = 0, string nombre = "Sin especificar", string pais = "Sin especificar")
+        public Buque(string codigo, int gTransporte = 0, int cantidadContainers = 20, int cantidadContainersCargados = 0, string nombre = "Sin especificar", string pais = "Sin especificar")
         {
             if (codigo.Length < 5)
             {
@@ -40,7 +40,7 @@ namespace Prueba1
                     codigo = string.Concat("0", codigo);
                 }
             }
-            this.gastoTransporte = gastoTransporte;
+            this.gTransporte = gTransporte;
             this.codigo = codigo;
             this.cantidadContainers = cantidadContainers;
             this.cantidadContainersCargados = cantidadContainersCargados;

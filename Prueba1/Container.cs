@@ -10,14 +10,14 @@ namespace Prueba1
     {
         private string codigo;
         private string marca;
-        private int capacidadMaxima;
+        private int CaMaxima;
         private byte tamaño;
         private bool esRefrigerado;
         private int pesoActual;
         public Buque buque;
         public string Codigo {get => codigo;}
         public string Marca {get => marca; set => marca = value;}
-        public int CapacidadMaxima {get => capacidadMaxima; set => capacidadMaxima = value;}
+        public int caMaxima {get => CaMaxima; set => CaMaxima = value;}
         public byte Tamaño {get => tamaño; set => tamaño = value;}
         public bool EsRefrigerado {get => esRefrigerado; set => esRefrigerado = value;}
         public int PesoActual
@@ -26,15 +26,15 @@ namespace Prueba1
             set
             {
                 if (value < 0) pesoActual = 0;
-                else if (value > capacidadMaxima) pesoActual = capacidadMaxima;
+                else if (value > CaMaxima) pesoActual = CaMaxima;
                 else pesoActual = value;
             }
         }
-        public Container(string codigo, Buque buque = null, int pesoActual = 0, int capacidadMaxima = 100000, byte tamaño = 20, string marca = "Sin especificar", bool esRefrigerado = false)
+        public Container(string codigo, Buque buque = null, int pesoActual = 0, int CaMaxima = 100000, byte tamaño = 20, string marca = "Sin especificar", bool esRefrigerado = false)
         {
             this.codigo = codigo;
             this.buque = buque;
-            this.capacidadMaxima = capacidadMaxima;
+            this.caMaxima = CaMaxima;
             this.pesoActual = pesoActual;
             // Si la condición no se cumple, el container será creado con el valor 20.
             if (tamaño >= 30) tamaño = 40;
@@ -48,29 +48,27 @@ namespace Prueba1
             if (pesoActual < 0) pesoActual = 0;
         }
         /// Calcula el valor que se pagara por una inspeccion.
-        /// Valor de la inspección.
         public int ValorPagoInspeccion()
         {
             return (pesoActual * 5);
         }
         /// Calcula el gasto del envio.
-        /// Valor del gasto.
         public int CalcularGastosEnvio()
         {
-            int gastoEnvio = buque.GastoEnvio / buque.CantidadContainers;
+            int gEnvio = buque.gEnvio / buque.CantidadContainers;
             if (tamaño == 40)
             {
-                gastoEnvio += gastoEnvio + 9000;
+                gEnvio += gEnvio + 10000;
             }
-            else gastoEnvio += 3500;
-            return gastoEnvio;
+            else gEnvio += 5000;
+            return gEnvio;
         }
         /// Determina si el container se puede cargar sin exceder el limite establecido.
         /// <param name="peso"></param>
         /// True si puede cargarse, y false si se excede el peso maximo extablesido.
         public bool PuedeSubir(int peso)
         {
-            if ((peso + pesoActual) > capacidadMaxima) return false;
+            if ((peso + pesoActual) > CaMaxima) return false;
             else return true;
         }
     }
