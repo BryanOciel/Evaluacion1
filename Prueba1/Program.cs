@@ -27,13 +27,13 @@ namespace Prueba1
                 Console.WriteLine("Codigo Container: " + f.Codigo);
                 Console.WriteLine("Marca: " + f.Marca);
                 Console.WriteLine("Pais: " + f.buque.Pais);
-                Console.WriteLine("Capacidad maxima: " + f.caMaxima + "kg");
-                Console.WriteLine("Tamaño: " + f.Tamaño + " pies de altura");
+                Console.WriteLine("Capacidad maxima: " + f.caMaxima + "kg|");
+                Console.WriteLine("Tamaño: " + f.Tamaño + " pies de altura|");
                 Console.Write("Es Un Container Refrigerado: ");
-                if (f.EsRefrigerado) Console.WriteLine("Si");
-                else Console.WriteLine("No");
-                Console.WriteLine("Peso Actual Del Container: " + f.PActual + "kg");
-                Console.WriteLine("+++++++++++++++++++++++++++++++++++++");
+                if (f.EsRefrigerado) Console.WriteLine("Si|");
+                else Console.WriteLine("No|");
+                Console.WriteLine("Peso Actual Del Container: " + f.PActual + "kg|");
+                Console.WriteLine("+++++++++++++++++++++++++++++++++++++++++++++++");
             }
             Console.WriteLine();
             Console.WriteLine("Containers Buque 35877");
@@ -43,30 +43,30 @@ namespace Prueba1
                 Console.WriteLine("Codigo Container: " + f.Codigo);
                 Console.WriteLine("Marca: " + f.Marca);
                 Console.WriteLine("Pais: " + f.buque.Pais);
-                Console.WriteLine("Capacidad maxima: " + f.caMaxima + "kg");
-                Console.WriteLine("Tamaño: " + f.Tamaño + " pies de altura");
+                Console.WriteLine("Capacidad maxima: " + f.caMaxima + "kg|");
+                Console.WriteLine("Tamaño: " + f.Tamaño + " pies de altura|");
                 Console.Write("Es Un Container Refrigerado: ");
-                if (f.EsRefrigerado) Console.WriteLine("Si");
-                else Console.WriteLine("No");
-                Console.WriteLine("Peso Actual Del Container: " + f.PActual + "kg");
+                if (f.EsRefrigerado) Console.WriteLine("Si|");
+                else Console.WriteLine("No|");
+                Console.WriteLine("Peso Actual Del Container: " + f.PActual + "kg|");
                 Console.WriteLine("+++++++++++++++++++++++++++++++++++++");
             }
             Console.WriteLine();
             Console.WriteLine("Valor Por El Envio De cada Container y su codigo es:");
             Console.WriteLine("+++++++++++++++++++++++++++++++++++++");
-            Console.WriteLine("Buque 35899| numero container " + pri.Codigo + " el precio del envio es: $" + pri.CalcularEnvio() + "");
-            Console.WriteLine("Buque 35899| numero container " + seg.Codigo + " el precio del envio es: $" + seg.CalcularEnvio() + "");
-            Console.WriteLine("Buque 35877| numero container " + ter.Codigo + " el precio del envio es: $" + ter.CalcularEnvio() + "");
-            Console.WriteLine("Buque 35877| numero container " + cua.Codigo + " el precio del envio es: $" + cua.CalcularEnvio() + "");
+            Console.WriteLine("Buque 35899| numero container " + pri.Codigo + " el precio del envio es: $" + pri.CalcularEnvio() + "|");
+            Console.WriteLine("Buque 35899| numero container " + seg.Codigo + " el precio del envio es: $" + seg.CalcularEnvio() + "|");
+            Console.WriteLine("Buque 35877| numero container " + ter.Codigo + " el precio del envio es: $" + ter.CalcularEnvio() + "|");
+            Console.WriteLine("Buque 35877| numero container " + cua.Codigo + " el precio del envio es: $" + cua.CalcularEnvio() + "|");
             Console.WriteLine("+++++++++++++++++++++++++++++++++++++");
             Console.WriteLine();
-            Console.WriteLine("Valor a Pagar Por Inspeccion Container "+ ter.Codigo+": $" + ter.ValorInspeccion() + "");
+            Console.WriteLine("Valor a Pagar Por Inspeccion Container "+ ter.Codigo+": $" + ter.ValorInspeccion() + "|");
             Console.WriteLine();
-                 if (cua.PuedeSubir(2000)) Console.WriteLine("Subir Caja de 2000 kilos al container "+ cua.Codigo+".");
-                 else Console.WriteLine("No subir caja de 2000 kilos al container "+ cua.Codigo+".");
+                 if (cua.PuedeSubir(2000)) Console.WriteLine("Subir Caja de 2000 kilos al container "+ cua.Codigo+"|");
+                 else Console.WriteLine("No subir caja de 2000 kilos al container "+ cua.Codigo+"|");
             Console.WriteLine();
                  pri.SacarPeso(200);
-            Console.WriteLine("Peso del primer container: " + pri.PActual + "kg");
+            Console.WriteLine("Peso del primer container restando los 200kg: " + pri.PActual + "kg|");
             Console.ReadKey();
         }
     }
