@@ -30,7 +30,7 @@ namespace Prueba1
                 else pActual = value;
             }
         }
-        public Container(string codigo, Buque buque = null, int pActual = 0, int CaMaxima = 100000, byte tamaño = 20, string marca = "Sin especificar", bool esRefrigerado = false)
+        public Container(string codigo, Buque buque = null, int pActual = 10, int CaMaxima = 100000, byte tamaño = 20, string marca = "hapag lloyd", bool esRefrigerado = false)
         {
             this.codigo = codigo;
             this.buque = buque;

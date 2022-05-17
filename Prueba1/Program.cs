@@ -10,7 +10,6 @@ namespace Prueba1
     {
         static void Main(string[] args)
         {
-
             Buque a = new Buque("35899", 551465,2,20,"Titanic","Uruguay");
             Buque b = new Buque("35877", 565456, 5, 20, "Esmeralda", "Chile");
             Container pri = new Container("15423", a, 45100);
@@ -57,8 +56,6 @@ namespace Prueba1
                 Console.WriteLine(".......................................");
             }
             Console.WriteLine();
-            Console.WriteLine("Valor inspección del tercer container:$" + ter.ValorPagoInspeccion() + "");
-            Console.WriteLine();
             Console.WriteLine("Valor Por El Envio De cada Container y su codigo es:");
             Console.WriteLine(".......................................");
             Console.WriteLine("Buque 35899 numero container " + pri.Codigo + " el precio del envio es: $" + pri.CalcularGastosEnvio() + "");
@@ -67,7 +64,9 @@ namespace Prueba1
             Console.WriteLine("Buque 35877 numero container " + cua.Codigo + " el precio del envio es: $" + cua.CalcularGastosEnvio() + "");
             Console.WriteLine(".......................................");
             Console.WriteLine();
-                 if (cua.PuedeSubir(2000)) Console.WriteLine("Se Puede subir una caja de 2000 kilos en el container "+ cua.Codigo+".");
+            Console.WriteLine("Valor a Pagar Por Inspeccion Container "+ ter.Codigo+": $" + ter.ValorPagoInspeccion() + "");
+            Console.WriteLine();
+            if (cua.PuedeSubir(2000)) Console.WriteLine("Se Puede subir una caja de 2000 kilos en el container "+ cua.Codigo+".");
                  else Console.WriteLine("No se puede subir una caja de 2000 kilos en el container "+ cua.Codigo+".");
             Console.WriteLine();
                  pri.SacarPeso(200);
